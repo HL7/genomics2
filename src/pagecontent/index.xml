@@ -1,0 +1,23 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../../../schema/fhir-single.xsd">
+  <p>
+    This is a proof-of-concept implementation guide showing how clinical genomics reports might be captured using FHIR in a manner that's aligned with the US lab Genomics implementation guide.
+    The proof-of-concept adheres to a couple of principles:
+  </p>
+  <ul>
+    <li>It tries to use Observations and their components and relationships where possible as this data will be captured and shared by lab systems that are used to treating all results as generic observations</li>
+    <li>It uses separate Observations for each piece of information that might be usefully assertable, interpretable and queriable as a separate piece of information</li>
+  </ul>
+  <p>
+    At present, this IG does not make use of the <a href="{{site.data.fhir.path}}sequence.html">Sequence</a> resource.  An open question is if/where/how it would best fit in this style of representation.
+  </p>
+  <a name="overview"> </a>
+  <h2>Overview</h2>
+  <p>
+    The diagnostic report relates to a hierarchy of child observations.  The following diagram provides an overview of the various profiles that make up the diagnostic report and shows how they interrelate.
+  </p>
+  <img src="CG-DiagnosticReport.png" alt="Class diagram showing the component parts of the diagnostic report"/>
+  <p>
+    The various observation profiles are organized in a hierarchical structure with certain shared components, including relationships to patient, specimen and lab.  The following diagram shows the relationship of the profiles.
+  </p>
+  <img src="CG-profile-hierarchy.png" alt="Class diagram showing the specialization structure of the observation classes as well as all relationships to Patient, Specimen and Organization."/>
+</div>

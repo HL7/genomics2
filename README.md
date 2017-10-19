@@ -1,2 +1,4 @@
-# genomics2
-Draft clinical genomics implementation guide leveraging Observation.component in preference to extensions as a proof of concept.  This IG will eventually b retired after the evaluation process is complete
+# sdc
+Proof-of-concept Clinical Genomics IG
+
+This IG demonstrates how clinical genomics observations might be captured without using the Sequence resource.  It has not been approved by any work group and is not intended for use in production systems.
